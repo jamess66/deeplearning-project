@@ -8,13 +8,13 @@ NUM_WORKERS = 4 # Number of parallel workers for data loading.
 DEVICE = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
 # Training images and XML files directory.
-TRAIN_DIR = 'data/License Plate Recognition.v1-raw-images.voc/train'
+TRAIN_DIR = '/content/cabbage-3/train'
 # Validation images and XML files directory.
-VALID_DIR = 'data/License Plate Recognition.v1-raw-images.voc/valid'
+VALID_DIR = '/content/cabbage-3/valid'
 
 # Classes: 0 index is reserved for background.
 CLASSES = [
-    'cabbage'
+    '__background__', 'License_Plate'
 ]
 
 NUM_CLASSES = len(CLASSES)
